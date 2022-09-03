@@ -38,7 +38,7 @@ RESULT pid_lock_init(const char* pidfile) {
 // Return FAILURE: We could not handle, or we do not want to proceed
 static RESULT pid_lock_handle_multiple_instance() {
     char readbuf[PID_STRING_BUFFER_SIZE]; // 12 is big enough to hold PID number
-    
+
     if (get_program_config()->kill_type == KILL_ROLLED) {
         PR_INFO("已进入 MiniEAP 多开模式");
         return SUCCESS;
