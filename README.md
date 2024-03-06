@@ -80,3 +80,5 @@ minieap -u 201000000 -p 15000000000 -n en0 --module printer --module rjv3 --modu
 本项目刚成立不久，虽然有过测试，但无法保证高可靠性。欢迎大家提出意见，谢谢！
 
 非常感谢 HustMoon 工作室以及 Hu Yunrui 同学对这个领域做出的贡献！
+
+修改部分字段以适应广州大学认证
