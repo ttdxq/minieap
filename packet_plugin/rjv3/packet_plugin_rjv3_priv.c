@@ -109,7 +109,7 @@ static void rjv3_set_v3_hash(uint8_t* hash_buf/*, ETH_EAP_FRAME* request*/) {
         0x38, 0x37, 0x66, 0x66, 0x39, 0x65, 0x34, 0x39, 
         0x61, 0x61, 0x39, 0x38, 0x66, 0x35, 0x64, 0x30
     };
-    /*
+    
     // computeV4 returns its internal buffer, which can not be freed
     if (IS_MD5_FRAME(request)) {
         _v3_buf = computeV4(request->content + sizeof(FRAME_HEADER) + 1, // position of MD5-Value
@@ -117,7 +117,7 @@ static void rjv3_set_v3_hash(uint8_t* hash_buf/*, ETH_EAP_FRAME* request*/) {
     } else {
         uint8_t _v3_pad[RJV3_PAD_SIZE] = {0x21, 0x6A, 0x69, 0x65, 0x72, 0x75, 0x69, 0x39, 0x30, 0x30, 0x32, 0x70, 0x6D, 0x73, 0x75, 0x73};
         _v3_buf = computeV4(_v3_pad, RJV3_PAD_SIZE);
-    }*/
+    }
     memmove(hash_buf, _hash, sizeof(_hash));//It's static hash in RG-SU For Linux V1.31, so...
 }
 
